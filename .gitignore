@@ -1,0 +1,80 @@
+# =============================================================
+# MIT-WPU RAG Engine — .gitignore
+# =============================================================
+
+# --- Environment ---
+.env
+.env.*
+!.env.example
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.pyw
+*.pyc
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+venv/
+env/
+ENV/
+.venv/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+*.whl
+
+# --- Testing ---
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+*.xml
+coverage.xml
+
+# --- Database ---
+*.db
+*.sqlite
+*.sqlite3
+
+# --- Storage (uploaded documents) ---
+storage/uploads/*
+!storage/uploads/.gitkeep
+
+# --- BM25 index files ---
+*.bm25
+*.pkl
+bm25_index/
+
+# --- Logs ---
+*.log
+logs/
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Evaluation results ---
+evaluation/evaluation_results/*.json
+evaluation/evaluation_results/*.csv
+
+# --- Temporary ---
+tmp/
+temp/
+*.tmp
+
+# --- Docker ---
+*.env.docker

@@ -1,0 +1,222 @@
+[
+  {
+    "id": "q01",
+    "question": "What is the primary purpose of the Bully Election Algorithm in distributed systems?",
+    "category": "direct_factual",
+    "expected_document": "Distributed Systems Unit 2.pptx",
+    "expected_slide_start": 18,
+    "expected_slide_end": 18,
+    "expected_concepts": ["coordinator election", "process crash", "highest priority ID"],
+    "expected_answer": "To elect a coordinator process among a group of distributed processes where the process with the highest ID/priority becomes the new coordinator upon failure detection.",
+    "is_in_domain": true
+  },
+  {
+    "id": "q02",
+    "question": "How does Lamport's Logical Clock maintain the happens-before relationship between distributed events?",
+    "category": "conceptual",
+    "expected_document": "Distributed Systems Unit 2.pptx",
+    "expected_slide_start": 25,
+    "expected_slide_end": 26,
+    "expected_concepts": ["happens-before", "timestamp", "clock increment", "message send receive"],
+    "expected_answer": "Each process increments its local counter before an event; when sending a message it attaches its timestamp; the receiver updates its clock to max(local_clock, message_timestamp) + 1.",
+    "is_in_domain": true
+  },
+  {
+    "id": "q03",
+    "question": "Compare the message complexity of the Bully Algorithm versus the Ring Algorithm during coordinator election.",
+    "category": "multi_slide",
+    "expected_document": "Distributed Systems Unit 2.pptx",
+    "expected_slide_start": 19,
+    "expected_slide_end": 22,
+    "expected_concepts": ["O(N^2) complexity", "Ring election", "O(N) message complexity"],
+    "expected_answer": "The Bully algorithm has worst-case message complexity of O(N^2), whereas the Ring algorithm requires 2N - 1 messages or O(N) complexity in normal operation.",
+    "is_in_domain": true
+  },
+  {
+    "id": "q04",
+    "question": "Define Byzantine Fault Tolerance and its condition for consensus in distributed networks.",
+    "category": "definition",
+    "expected_document": "Distributed Systems Unit 3.pptx",
+    "expected_slide_start": 12,
+    "expected_slide_end": 13,
+    "expected_concepts": ["Byzantine Generals", "arbitrary failure", "3m+1 nodes", "consensus"],
+    "expected_answer": "Byzantine Fault Tolerance is the dependability of a fault-tolerant system where components may fail arbitrarily or act maliciously; consensus requires at least 3m + 1 nodes to tolerate m faulty nodes.",
+    "is_in_domain": true
+  },
+  {
+    "id": "q05",
+    "question": "What is the difference between synchronous and asynchronous RPC invocation models?",
+    "category": "technical_terminology",
+    "expected_document": "Distributed Systems Unit 1.pptx",
+    "expected_slide_start": 14,
+    "expected_slide_end": 15,
+    "expected_concepts": ["blocking RPC", "non-blocking", "stub", "callback", "future"],
+    "expected_answer": "In synchronous RPC the client thread blocks waiting for server response, while in asynchronous RPC the client initiates the call and continues execution, receiving results via callbacks or futures.",
+    "is_in_domain": true
+  },
+  {
+    "id": "q06",
+    "question": "How does vector clocks differ from Lamport logical clocks in detecting causal concurrency?",
+    "category": "conceptual",
+    "expected_document": "Distributed Systems Unit 2.pptx",
+    "expected_slide_start": 28,
+    "expected_slide_end": 29,
+    "expected_concepts": ["vector clock", "concurrency detection", "causality", "array of clocks"],
+    "expected_answer": "Lamport clocks provide partial ordering but cannot distinguish between causally related and concurrent events; vector clocks maintain an array of clocks per process allowing exact detection of concurrency.",
+    "is_in_domain": true
+  },
+  {
+    "id": "q07",
+    "question": "Explain the Ricart-Agrawala algorithm for distributed mutual exclusion.",
+    "category": "multi_slide",
+    "expected_document": "Distributed Systems Unit 2.pptx",
+    "expected_slide_start": 32,
+    "expected_slide_end": 35,
+    "expected_concepts": ["mutual exclusion", "timestamped request", "OK response", "critical section"],
+    "expected_answer": "An optimization of Lamport's mutual exclusion where a process broadcasts a timestamped request to all nodes and enters the critical section only after receiving permission from all other nodes.",
+    "is_in_domain": true
+  },
+  {
+    "id": "q08",
+    "question": "What is the Two-Phase Commit (2PC) protocol and how does it handle coordinator crash during the prepare phase?",
+    "category": "multi_document",
+    "expected_document": "Distributed Systems Unit 3.pptx",
+    "expected_slide_start": 40,
+    "expected_slide_end": 42,
+    "expected_concepts": ["prepare phase", "commit phase", "voting", "coordinator crash", "blocking protocol"],
+    "expected_answer": "2PC consists of Prepare and Commit phases; if the coordinator crashes during prepare phase before decision logging, participants timeout and abort or elect a recovery coordinator.",
+    "is_in_domain": true
+  },
+  {
+    "id": "q09",
+    "question": "Explain Quantum Entanglement and its role in quantum teleportation.",
+    "category": "out_of_domain",
+    "expected_document": null,
+    "expected_slide_start": null,
+    "expected_slide_end": null,
+    "expected_concepts": ["quantum entanglement", "Bell state", "spin"],
+    "expected_answer": null,
+    "is_in_domain": false
+  },
+  {
+    "id": "q10",
+    "question": "How do mitochondria generate ATP in eukaryotic cells?",
+    "category": "out_of_domain",
+    "expected_document": null,
+    "expected_slide_start": null,
+    "expected_slide_end": null,
+    "expected_concepts": ["mitochondria", "oxidative phosphorylation", "ATP"],
+    "expected_answer": null,
+    "is_in_domain": false
+  },
+  {
+    "id": "q11",
+    "question": "Explain the role of Idempotent operations in designing distributed RESTful services.",
+    "category": "technical_terminology",
+    "expected_document": "Distributed Systems Unit 1.pptx",
+    "expected_slide_start": 22,
+    "expected_slide_end": 23,
+    "expected_concepts": ["idempotency", "PUT", "DELETE", "duplicate requests", "safe retry"],
+    "expected_answer": "An idempotent operation produces the same system state regardless of how many times it is executed, allowing safe re-transmission of lost requests over unreliable networks.",
+    "is_in_domain": true
+  },
+  {
+    "id": "q12",
+    "question": "What is consistency hashing and why is it preferred over modular hashing in distributed caching?",
+    "category": "conceptual",
+    "expected_document": "Distributed Systems Unit 4.pptx",
+    "expected_slide_start": 10,
+    "expected_slide_end": 12,
+    "expected_concepts": ["consistent hashing", "hash ring", "node churn", "rehashing K/N keys"],
+    "expected_answer": "Consistent hashing maps both keys and nodes to a circular hash ring; when a node joins or leaves, only K/N keys need to be remapped on average rather than all keys as with modular hashing.",
+    "is_in_domain": true
+  },
+  {
+    "id": "q13",
+    "question": "What is the CAP Theorem and what trade-offs does it necessitate in network partition events?",
+    "category": "definition",
+    "expected_document": "Distributed Systems Unit 3.pptx",
+    "expected_slide_start": 5,
+    "expected_slide_end": 6,
+    "expected_concepts": ["Consistency", "Availability", "Partition Tolerance", "Brewer"],
+    "expected_answer": "The CAP theorem states that a distributed data store can guarantee at most two out of Consistency, Availability, and Partition Tolerance; during a network partition, one must choose between C and A.",
+    "is_in_domain": true
+  },
+  {
+    "id": "q14",
+    "question": "How does Raft consensus elect a leader when the current leader experiences a heartbeat timeout?",
+    "category": "multi_slide",
+    "expected_document": "Distributed Systems Unit 3.pptx",
+    "expected_slide_start": 20,
+    "expected_slide_end": 23,
+    "expected_concepts": ["Raft election", "term increment", "candidate state", "RequestVote RPC", "quorum"],
+    "expected_answer": "A follower transitions to candidate upon election timeout, increments the term counter, votes for itself, and sends RequestVote RPCs to all peers; it becomes leader upon securing votes from a majority.",
+    "is_in_domain": true
+  },
+  {
+    "id": "q15",
+    "question": "What is false sharing in distributed shared memory (DSM) and how can it be mitigated?",
+    "category": "misleading_or_subtle",
+    "expected_document": "Distributed Systems Unit 4.pptx",
+    "expected_slide_start": 18,
+    "expected_slide_end": 19,
+    "expected_concepts": ["false sharing", "page granularity", "independent variables", "ping-pong effect"],
+    "expected_answer": "False sharing occurs when two processes access independent variables located on the same virtual memory page, causing unnecessary page invalidation ping-pong; mitigated by padding or smaller page units.",
+    "is_in_domain": true
+  },
+  {
+    "id": "q16",
+    "question": "Explain Chandy-Lamport distributed snapshot algorithm.",
+    "category": "multi_slide",
+    "expected_document": "Distributed Systems Unit 2.pptx",
+    "expected_slide_start": 38,
+    "expected_slide_end": 41,
+    "expected_concepts": ["marker message", "global state", "channel recording", "consistent cut"],
+    "expected_answer": "A process records its local state and sends a marker on all outgoing channels; upon receiving a marker for the first time, a process records its own state and starts recording messages on other channels until markers arrive.",
+    "is_in_domain": true
+  },
+  {
+    "id": "q17",
+    "question": "What is the primary difference between at-least-once and exactly-once RPC semantics?",
+    "category": "technical_terminology",
+    "expected_document": "Distributed Systems Unit 1.pptx",
+    "expected_slide_start": 18,
+    "expected_slide_end": 19,
+    "expected_concepts": ["at-least-once", "exactly-once", "duplicate filtering", "acknowledgment"],
+    "expected_answer": "At-least-once guarantees execution but may duplicate operations upon retries; exactly-once uses duplicate detection tables and request IDs to ensure that an operation is applied only once despite retries.",
+    "is_in_domain": true
+  },
+  {
+    "id": "q18",
+    "question": "What is Gossip Protocol (Epidemic Protocol) and what are its convergence properties?",
+    "category": "conceptual",
+    "expected_document": "Distributed Systems Unit 4.pptx",
+    "expected_slide_start": 25,
+    "expected_slide_end": 26,
+    "expected_concepts": ["gossip protocol", "anti-entropy", "rumor mongering", "exponential spread"],
+    "expected_answer": "A decentralized communication protocol where nodes periodically exchange information with randomly chosen peers, achieving probabilistic O(log N) exponential convergence across the network.",
+    "is_in_domain": true
+  },
+  {
+    "id": "q19",
+    "question": "Explain Black Hole thermodynamics and Hawking Radiation.",
+    "category": "out_of_domain",
+    "expected_document": null,
+    "expected_slide_start": null,
+    "expected_slide_end": null,
+    "expected_concepts": ["black hole", "event horizon", "Hawking radiation"],
+    "expected_answer": null,
+    "is_in_domain": false
+  },
+  {
+    "id": "q20",
+    "question": "How does Maekawa's algorithm reduce the message complexity of distributed mutual exclusion compared to Ricart-Agrawala?",
+    "category": "multi_document",
+    "expected_document": "Distributed Systems Unit 2.pptx",
+    "expected_slide_start": 36,
+    "expected_slide_end": 37,
+    "expected_concepts": ["Maekawa", "voting sets", "O(sqrt(N)) complexity", "quorum intersection"],
+    "expected_answer": "Maekawa groups processes into voting sets where every pair of sets shares at least one common member, reducing message complexity from O(N) to O(sqrt(N)) messages per entry request.",
+    "is_in_domain": true
+  }
+]
